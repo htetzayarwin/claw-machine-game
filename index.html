@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claw Machine Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Claw Machine Game </h1>
+<h1>HTET</h1>
+        <div class="machine">
+
+            <div class="glass">
+                <div class="claw" id="claw">
+                    <div class="claw-rope"></div>
+                    <div class="claw-head">✂</div>
+                </div>
+
+                <div class="toys" id="toys">
+                    <div class="toy">🐱</div>
+                    <div class="toy">🐻</div>
+                    <div class="toy">🧸</div>
+                    <div class="toy">🐻</div>
+                    <div class="toy">🐰</div>
+                    <div class="toy">🐼</div>
+                    <div class="toy">🐸</div>
+                    <div class="toy">🐱</div>
+                    <div class="toy">🐻</div>
+                    <div class="toy">🐰</div>
+                    <div class="toy">🐼</div>
+                    <div class="toy">🐸</div>
+                    <div class="toy"></div>
+                    <div class="toy"></div>
+                    <div class="toy"></div>
+                <div class="toy"></div>
+                    <div class="toy"></div>
+                    <div class="toy"></div>
+                    <div class="toy"></div>
+                    <div class="toy"></div>
+                </div>
+            </div>
+
+            <div class="machine-bottom">
+                <div class="prize-box" id="prizeBox">
+                    <p>YOUR PRIZES</p>
+                </div>
+
+                <div class="controls">
+                    <button id="leftBtn">◀</button>
+                    <button id="dropBtn">⬇</button>
+                    <button id="rightBtn">▶</button>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 id="message">Press DROP to catch a toy!</h2>
+        <p class="score">Score: <span id="score">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
