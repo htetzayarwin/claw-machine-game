@@ -4,64 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claw Machine Game</title>
+    <meta name="theme-color" content="#10172b">
+    <title>Pixel Claw Machine - HTET</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="wrapper">
-        <h1>Claw Machine Game </h1>
-<h1>HTET</h1>
-        <div class="machine">
+<main class="app">
 
-            <div class="glass">
-                <div class="claw" id="claw">
-                    <div class="claw-rope"></div>
-                    <div class="claw-head">✂</div>
-                </div>
+    <header class="topbar">
+        <div class="logo">✦</div>
+        <div>
+            <p class="eyebrow">ARCADE • PRIZE CORNER</p>
+            <h1>CLAW <span>MACHINE</span></h1>
+        </div>
+        <button id="soundBtn" class="icon-button">♫</button>
+    </header>
 
-                <div class="toys" id="toys">
-                    <div class="toy">🐱</div>
-                    <div class="toy">🐻</div>
-                    <div class="toy">🧸</div>
-                    <div class="toy">🐻</div>
-                    <div class="toy">🐰</div>
-                    <div class="toy">🐼</div>
-                    <div class="toy">🐸</div>
-                    <div class="toy">🐱</div>
-                    <div class="toy">🐻</div>
-                    <div class="toy">🐰</div>
-                    <div class="toy">🐼</div>
-                    <div class="toy">🐸</div>
-                    <div class="toy"></div>
-                    <div class="toy"></div>
-                    <div class="toy"></div>
-                <div class="toy"></div>
-                    <div class="toy"></div>
-                    <div class="toy"></div>
-                    <div class="toy"></div>
-                    <div class="toy"></div>
-                </div>
+    <section class="game-card">
+
+        <div class="machine-top">
+            <div class="status">● LIVE GAME</div>
+            <div class="stats">
+                <div>SCORE <strong id="score">000</strong></div>
+                <div>TRIES <strong id="tries">10</strong></div>
+                <div>PRIZES <strong id="prizeCount">00</strong></div>
+            </div>
+        </div>
+
+        <div class="cabinet">
+
+            <div class="cabinet-cap">
+                ★ LUCKY CATCH ★
             </div>
 
-            <div class="machine-bottom">
-                <div class="prize-box" id="prizeBox">
-                    <p>YOUR PRIZES</p>
+            <div class="glass-frame" id="glass">
+
+                <div class="glass-glint"></div>
+                <div class="rail"></div>
+
+                <div class="claw" id="claw">
+                    <div class="cable"></div>
+                    <div class="claw-body">
+                        <span class="finger left"></span>
+                        <span class="finger right"></span>
+                        <span class="core">◆</span>
+                    </div>
+                    <div class="carried" id="carriedPrize"></div>
                 </div>
 
-                <div class="controls">
-                    <button id="leftBtn">◀</button>
-                    <button id="dropBtn">⬇</button>
-                    <button id="rightBtn">▶</button>
+                <div class="toy-pile" id="toyPile"></div>
+
+                <div class="floor"></div>
+
+                <div class="chute">
+                    PRIZE OUT
+                    <b>▼</b>
                 </div>
+
+            </div>
+
+            <div class="cabinet-base">
+                <div class="speaker">▥ ▥ ▥</div>
+                <div class="coin-slot">INSERT COIN ▰</div>
+                <div>✦ ✧ ✦</div>
             </div>
 
         </div>
 
-        <h2 id="message">Press DROP to catch a toy!</h2>
-        <p class="score">Score: <span id="score">0</span></p>
-    </div>
+        <div class="message-panel">
+            <span id="messageIcon">★</span>
+            <p id="message">Move the claw and press DROP!</p>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="control-deck">
+
+            <div class="d-pad">
+                <button id="leftBtn" aria-label="Move left">◀</button>
+                <button id="dropBtn" class="drop-button">DROP</button>
+                <button id="rightBtn" aria-label="Move right">▶</button>
+            </div>
+
+            <button id="resetBtn" class="reset-button">
+                ↻ NEW GAME
+            </button>
+
+        </div>
+
+        <p class="help">
+            KEYBOARD: ← → MOVE · SPACE / ↓ DROP
+        </p>
+
+    </section>
+
+    <section class="collection-card">
+        <div class="collection-heading">
+            <div>
+                <p class="eyebrow">YOUR LOOT</p>
+                <h2>PRIZE COLLECTION</h2>
+            </div>
+            <span id="collectionTotal">0 / 10</span>
+        </div>
+
+        <div class="collection-tray" id="prizeBox">
+            <span class="empty-note">
+                Your plushies will appear here!
+            </span>
+        </div>
+    </section>
+
+    <footer>
+        MADE WITH ♥ BY HTET · GOOD LUCK!
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
